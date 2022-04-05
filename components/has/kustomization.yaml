@@ -11,7 +11,7 @@ images:
     newTag: c7f42f12f29fa7c2a711c6be659120138de1d22f
 configMapGenerator:
   - literals:
-      - GITHUB_ORG=psturc
+      - GITHUB_ORG=psturc-org
     name: github-config
     behavior: replace
 namespace: application-service
