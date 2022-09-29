@@ -7,7 +7,7 @@ MODE=preview parse_flags $@
 
 
 PIPELINE_SERVICE_DIR=$(mktemp -d)
-git clone --depth 1 https://github.com/openshift-pipelines/pipeline-service/ $PIPELINE_SERVICE_DIR
+git clone --depth 1 --branch macos-compatibility-fix https://github.com/psturc/pipeline-service/ $PIPELINE_SERVICE_DIR
 export WORK_DIR="${PIPELINE_SERVICE_DIR}/gitops/sre/"
 export WORKSPACE_DIR=$WORK_DIR
 
