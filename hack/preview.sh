@@ -115,12 +115,12 @@ evaluate_apiexports() {
       if [ -z "$IDENTITY_HASH" ]; then
         echo Unknown IDENTITY_HASH for $REQUEST
       else
-        sed -i "s/\b$REQUEST\b/$IDENTITY_HASH/g" $APIEXPORTFILE
+        sed -i.bak "s/\b$REQUEST\b/$IDENTITY_HASH/g" $APIEXPORTFILE
       fi
     done
   done
 }
-APIEXPORTS=$(find -name '*apiexport*.yaml' | grep overlays/dev)
+APIEXPORTS=$(find . -name '*apiexport*.yaml' | grep overlays/dev)
 evaluate_apiexports "$(echo $APIEXPORTS | grep -v '/hacbs/')"
 KUBECONFIG=${KCP_KUBECONFIG} kubectl ws ${ROOT_WORKSPACE}:redhat-hacbs
 evaluate_apiexports "$(echo $APIEXPORTS | grep '/hacbs/')"
