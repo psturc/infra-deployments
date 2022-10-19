@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Expects up to 3 parameters.
 # 1. is the vault host (defaults to https://spi-vault-spi-system.apps.<cluster URL>)

@@ -59,6 +59,9 @@ parse_flags() {
 
   if [ "${MODE}" == "preview" ]
   then
+    if [ "${PARSE_FLAGS_RUN}" == "1" ]; then
+      return
+    fi
     if [[ -n ${KCP_KUBECONFIG_FLAG}${CLUSTER_KUBECONFIG_FLAG} ]]
     then
       echo "ERROR: You cannot use the parameter --kcp-kubeconfig nor --cluster-kubeconfig in preview mode - use only the './hack/preview.env' file" >&2
@@ -112,4 +115,5 @@ parse_flags() {
     exit 1
   fi
   export KCP_VERSION=${KCP_VERSION:-"$(echo ${KCP_SERVER_VERSION} | sed 's/.*kcp-\([^-]*\).*/\1/')"}
+  export PARSE_FLAGS_RUN=1
 }
