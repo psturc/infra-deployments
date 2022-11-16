@@ -6,7 +6,7 @@ resources:
 - argo-cd.yaml
 
 # Custom Resource Definitions:
-- https://raw.githubusercontent.com/redhat-appstudio/managed-gitops/33705d2bf7faa59cdaa3d6515c1c6480438c15c0/appstudio-shared/manifests/appstudio-shared-customresourcedefinitions.yaml
+#- https://raw.githubusercontent.com/redhat-appstudio/managed-gitops/33705d2bf7faa59cdaa3d6515c1c6480438c15c0/appstudio-shared/manifests/appstudio-shared-customresourcedefinitions.yaml
 - https://raw.githubusercontent.com/redhat-appstudio/managed-gitops/33705d2bf7faa59cdaa3d6515c1c6480438c15c0/backend-shared/config/crd/bases/managed-gitops.redhat.com_gitopsdeploymentrepositorycredentials.yaml
 - https://raw.githubusercontent.com/redhat-appstudio/managed-gitops/33705d2bf7faa59cdaa3d6515c1c6480438c15c0/backend-shared/config/crd/bases/managed-gitops.redhat.com_gitopsdeployments.yaml
 - https://raw.githubusercontent.com/redhat-appstudio/managed-gitops/33705d2bf7faa59cdaa3d6515c1c6480438c15c0/backend-shared/config/crd/bases/managed-gitops.redhat.com_gitopsdeploymentsyncruns.yaml
