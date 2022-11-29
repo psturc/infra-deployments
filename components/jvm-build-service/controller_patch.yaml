@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hacbs-jvm-operator
+  namespace: jvm-build-service
+spec:
+  template:
+    spec:
+      containers:
+      - name: hacbs-jvm-operator
+        env:
+          - name: IMAGE_TAG
+            value: 398d723ee6e9a0a035630332b76bef9400e0a370
+
