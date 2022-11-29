@@ -18,4 +18,8 @@ spec:
         env:
           - name: IMAGE_REPOSITORY
             value: ""
+          - name: JVM_BUILD_SERVICE_CACHE_IMAGE
+            value: ""
+          - name: JVM_BUILD_SERVICE_REQPROCESSOR_IMAGE
+            value: ""
 
