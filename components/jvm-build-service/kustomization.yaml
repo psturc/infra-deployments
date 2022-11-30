@@ -1,22 +1,18 @@
 resources:
-- allow-argocd-to-manage.yaml
-- https://github.com/redhat-appstudio/jvm-build-service/deploy/crds/base?ref=398d723ee6e9a0a035630332b76bef9400e0a370
-- https://github.com/redhat-appstudio/jvm-build-service/deploy/operator/base?ref=398d723ee6e9a0a035630332b76bef9400e0a370
-- https://github.com/redhat-appstudio/jvm-build-service/deploy/operator/config?ref=398d723ee6e9a0a035630332b76bef9400e0a370
-- .tekton/
-
+  - allow-argocd-to-manage.yaml
+  - https://github.com/psturc/jvm-build-service/deploy/crds/base?ref=f1ccc0358907c305dc0fe9b5105f17c9a0592755
+  - https://github.com/psturc/jvm-build-service/deploy/operator/base?ref=f1ccc0358907c305dc0fe9b5105f17c9a0592755
+  - https://github.com/psturc/jvm-build-service/deploy/operator/config?ref=f1ccc0358907c305dc0fe9b5105f17c9a0592755
+  - .tekton/
 namespace: jvm-build-service
-
 images:
-- name: hacbs-jvm-operator
-  newName: quay.io/redhat-appstudio/hacbs-jvm-controller
-  newTag: 398d723ee6e9a0a035630332b76bef9400e0a370
-
+  - name: hacbs-jvm-operator
+    newName: quay.io/redhat-appstudio/hacbs-jvm-controller
+    newTag: f1ccc0358907c305dc0fe9b5105f17c9a0592755
 patches:
-- path: ./operator_env_patch.yaml
-  target:
-    kind: Deployment
-    name: hacbs-jvm-operator
-
+  - path: ./operator_env_patch.yaml
+    target:
+      kind: Deployment
+      name: hacbs-jvm-operator
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
