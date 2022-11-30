@@ -12,7 +12,7 @@ configMapGenerator:
 - name: build-pipelines-defaults
   namespace: build-templates
   literals:
-  - default_build_bundle=quay.io/psturc/pipeline-java-builder:hack2
+  - default_build_bundle=quay.io/psturc/pipeline-java-builder:hack-appstudio
   - hacbs_build_bundle=quay.io/psturc/pipeline-java-builder:hack2
 
 # Skip applying the Tekton operands while the Tekton operator is being installed.
