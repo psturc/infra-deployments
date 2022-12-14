@@ -19,4 +19,4 @@ data:
   # Rekor integration is disabled for now. It is planned to be re-introduced
   # in the future.
   transparency.enabled: "false"
-  transparency.url: https://rekor.apps.ci-ln-yyhhhxt-72292.origin-ci-int-gce.dev.rhcloud.com
+  transparency.url: https://rekor.apps.ci-ln-zts6m7k-72292.origin-ci-int-gce.dev.rhcloud.com
