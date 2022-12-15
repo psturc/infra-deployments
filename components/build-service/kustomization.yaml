@@ -1,6 +1,6 @@
 resources:
 - allow-argocd-to-manage.yaml
-- https://github.com/redhat-appstudio/build-service/config/default?ref=145d4471b7450573f833000efc0bd7fdb0d92379
+- https://github.com/redhat-appstudio/build-service/config/default?ref=ab10d18cd91f763248684dd527996fd97b8f5351
 - build-pipeline-selector.yaml
 
 namespace: build-service
@@ -8,7 +8,7 @@ namespace: build-service
 images:
 - name: quay.io/redhat-appstudio/build-service
   newName: quay.io/redhat-appstudio/pull-request-builds
-  newTag: buildserv-145d4471b7450573f833000efc0bd7fdb0d92379
+  newTag: buildserv-ab10d18cd91f763248684dd527996fd97b8f5351
 
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
