@@ -22,5 +22,9 @@ rules:
   resources:
   - buildpipelineselectors
   verbs:
-  - update
+  - create
+  - get
+  - list
   - patch
+  - update
+  - watch
