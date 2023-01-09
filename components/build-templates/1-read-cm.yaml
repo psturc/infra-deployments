@@ -6,3 +6,6 @@ rules:
 - apiGroups: [""]
   resources: ["configmaps"]
   verbs: ["list", "get"]
+- apiGroups: ["appstudio.redhat.com"]
+  resources: ["buildpipelineselectors"]
+  verbs: ["list", "get"]
