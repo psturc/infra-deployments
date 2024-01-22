@@ -6,7 +6,7 @@ source $(dirname "$0")/utils.sh
 
 SPI_DATA_PATH_PREFIX=${SPI_DATA_PATH_PREFIX:-spi}
 SPI_POLICY_NAME=${SPI_DATA_PATH_PREFIX//\//-}
-SPI_APP_ROLE_FILE="$(realpath .tmp)/approle_secret.yaml"
+SPI_APP_ROLE_FILE="$(grealpath .tmp)/approle_secret.yaml"
 
 function k8sAuth() {
 	if ! vaultExec "vault auth list | grep -q kubernetes"; then

@@ -4,7 +4,7 @@
 
 source $(dirname "$0")/utils.sh
 
-REMOTE_SECRET_APP_ROLE_FILE="$(realpath .tmp)/approle_remote_secret.yaml"
+REMOTE_SECRET_APP_ROLE_FILE="$(grealpath .tmp)/approle_remote_secret.yaml"
 
 function auth() {
 	if ! vaultExec "vault auth list | grep -q approle"; then
